@@ -201,8 +201,9 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  var comb=nombre+apellido;
-  return comb;
+  var combinacion;
+  combinacion = nombre +' '+ apellido;
+  return combinacion;
 }
 
 function obtenerSaludo(nombre) {
@@ -249,12 +250,11 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
-  if(str.length(letra)<1){
-    if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
-      return "Es vocal";    
+  if(letra.length>1){
+    return 'Dato incorrecto';    
   }
-  else{
-    return false;
+  if(letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u'){
+    return 'Es vocal';
   }
 }
 
